@@ -1,6 +1,6 @@
 {
   "name": "p2m-common-logger",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A basic logger initialize logic that is used by Shanghai PTM tech",
   "main": "index.js",
   "scripts": {
@@ -21,8 +21,8 @@
   },
   "homepage": "https://github.com/colin-han/p2m-common-logger#readme",
   "dependencies": {
-    "tracer": "^0.8.7",
-    "lodash": "^4.16.5"
+    "lodash": "^4.16.5",
+    "tracer": "^0.8.7"
   },
   "peerDependencies": {
     "config": "^1.21.0"
