@@ -11,18 +11,19 @@ var defaultSetting = {
   format: '{{timestamp}} <{{title}}> [{{tag}}] {{message}} (in {{file}}:{{line}})',
 };
 
-module.exports = function(tag, logPath, file) {
+module.exports = function(tag, logPath) {
   tag = (tag && tag.toUpperCase()) || 'NO-TAG';
-  if(file) {
-    defaultSetting.transport = function(data) {
+  var setting = _.assign({}, defaultSetting, config.tracer);
+  if(logPath) {
+    setting.transport = function(data) {
       console.log(data.output);
       fs.appendFile(`${logPath}/${tag}.log`, data.output + '\n', (err) => {
         if (err) throw err;
       });
     }
   }
-  var setting = _.assign({}, defaultSetting, config.tracer);
   setting.format = setting.format.replace(/\{\{tag}}/g, tag);
   return tracer.colorConsole(setting);
 };
+
 
