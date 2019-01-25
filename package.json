@@ -1,6 +1,6 @@
 {
   "name": "p2m-common-logger",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A basic logger initialize logic that is used by Shanghai PTM tech",
   "main": "index.js",
   "scripts": {
