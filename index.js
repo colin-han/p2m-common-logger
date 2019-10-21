@@ -15,6 +15,7 @@ try {
 var defaultSetting = {
   level: 0,
   format: '{{timestamp}} <{{title}}> [{{tag}}] {{message}} (in {{file}}:{{line}})',
+  dateformat: 'yymmdd-HH:MM:ss.L'
 };
 
 module.exports = function(tag, logPath) {
